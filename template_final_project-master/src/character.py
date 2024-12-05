@@ -1,5 +1,5 @@
 import pygame
-
+from assets import 9-2
 
 class Character:
 
@@ -18,7 +18,7 @@ class Character:
         """
         self.x = x
         self.y = y
-        self.image = pygame.image.load(img_file)
+        self.image = pygame.image.load("9-2-ghost-png-file.png")
         self.rect = self.image.get_rect(bottomleft=(x, y))
 
 
@@ -32,7 +32,7 @@ class Character:
         """
         self.velocity = velocity
         self.keys = keys
-        if keys[pygame.K_RIGHT]:
+        if keys[pygame.K_RIGHT]: 
             x+= velocity
             
         
@@ -40,7 +40,7 @@ class Character:
 
 
 
-    def move_left(self, keys, velocity):
+    def move_left(self, keys, velocity, left_boundary):
         """
         moves position left by 1
         args: None
@@ -48,8 +48,8 @@ class Character:
         """
         self.keys = keys
         self.velocity = velocity
-    
-        if keys[pygame.K_RIGHT]:
+        self.left_boundary = left_boundary
+        if keys[pygame.K_RIGHT] and x > left_boundary:
             x -= velocity
 
     def jump(self, keys, velocity):
