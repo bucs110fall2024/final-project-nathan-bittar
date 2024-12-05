@@ -1,5 +1,5 @@
 import pygame
-from character import Character
+from src.character import Character
 from sawblades import Sawblade 
 from scoreboard import Scoreboard
 
@@ -30,11 +30,11 @@ class Controller:
             background_color_green = 211
             background_color_blue = 217
             keys = pygame.key.get_pressed
-            Character.__init__(x, y, img_file)
+            Character.__init__(x, y, '')
             Character.move_right(keys, velocity)
             Character.move_left(keys, velocity, left_boundary)
             Character.jump(keys, velocity)
-            win.fill((background_color_red, background_color_green, background_color_blue))
+            # win.fill((background_color_red, background_color_green, background_color_blue))
         
       #3. Redraw next frame
 

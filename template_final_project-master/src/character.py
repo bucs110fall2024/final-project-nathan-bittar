@@ -1,5 +1,5 @@
 import pygame
-from assets import 9-2
+
 
 class Character:
 
@@ -20,6 +20,7 @@ class Character:
         self.y = y
         self.image = pygame.image.load("9-2-ghost-png-file.png")
         self.rect = self.image.get_rect(bottomleft=(x, y))
+        
 
 
 
