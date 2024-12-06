@@ -5,3 +5,4 @@ class Scoreboard:
         args: None
         return: score
         """
+        
