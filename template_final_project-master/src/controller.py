@@ -7,9 +7,10 @@ from src.scoreboard import Scoreboard
 
 
 class Controller:
+    WIDTH = 800
+    HEIGHT = 800
 
-
-    def __init__(self, width = 800, height = 800):
+    def __init__(self, WIDTH, HEIGHT):
         """
         Initializes the game window and objects
         args:
@@ -36,7 +37,8 @@ class Controller:
 
     def mainloop():
         """
-        docstring
+        Main Loop for the game
+        Args : None
         """
         
         velocity = 5
